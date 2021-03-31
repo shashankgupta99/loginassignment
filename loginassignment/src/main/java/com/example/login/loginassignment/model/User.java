@@ -1,14 +1,18 @@
 package com.example.login.loginassignment.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection="login")
 public class User {
 	
 	private String fname;
 	private String lname;
+	@Id
 	private String uname;
 	private String password;
 	private String password2;
-	//private User[] udataa;
+	
 	
 	
 	
@@ -22,10 +26,11 @@ public class User {
 		super();
 		this.fname = fname;
 		this.lname = lname;
+		
 		this.uname = uname;
 		this.password = password;
 		this.password2 = password2;
-		//this.udataa = udataa;
+		
 	}
 
 
@@ -87,18 +92,6 @@ public class User {
 	public void setPassword2(String password2) {
 		this.password2 = password2;
 	}
-
-
-
-/*	public User[] getUdataa() {
-		return udataa;
-	}
-
-
-
-	public void setUdataa(User[] udataa) {
-		this.udataa = udataa;
-	}*/
 	
 	
 	@Override
